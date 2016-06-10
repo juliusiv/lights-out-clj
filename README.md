@@ -1,28 +1,31 @@
-# lights-out
-
-FIXME: description
+# Lights Out
+[Lights Out](https://en.wikipedia.org/wiki/Lights_Out_(game)) is a simple game
+where you have a grid of lights and you try to turn them all off. Clicking a
+light toggles the light itself and all adjacent lights (not including diagonally
+adjacent). This is an implementation using Clojure and
+[Seesaw](https://en.wikipedia.org/wiki/Lights_Out_(game)).
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Just clone this repo and make sure you have [Leinengen](http://leiningen.org/).
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar lights-out-0.1.0-standalone.jar [args]
+Run the command `lein run -m lights-out.core`. The game will start and you can
+click lights to your heart's content.
 
 ## Options
 
-FIXME: listing of options this app accepts.
+None yet.
 
 ## Examples
 
-...
+![An image of the board](screenshots/board.png)
 
 ### Bugs
 
-...
+Currently, all you can do is click the lights. You won't be notified if you win
+and there's no option to restart or start a new game.
 
 ### Any Other Sections
 ### That You Think
@@ -30,7 +33,7 @@ FIXME: listing of options this app accepts.
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016 Julius Alexander IV
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
