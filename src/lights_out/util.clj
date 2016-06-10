@@ -5,9 +5,15 @@
   []
   (= (rand-int 2) 1))
 
-(defn print-each
-  "Print each item in a seq."
-  [vals]
-  (doseq [i vals]
-    (println i))
-  (println "\n"))
+(defn rand-bool-coll
+  "Return a vector of size |n| filled with random booleans."
+  [n]
+  (into [] (map (fn [_] (rand-bool)) (range n))))
+
+(defn amap-indexed
+  "Map over each element in a 2d seq with its row and column and apply |f|."
+  [f arr]
+  (map-indexed
+    (fn [row sub-arr]
+      (map-indexed (fn [col elem] (f row col elem)) sub-arr))
+    arr))
